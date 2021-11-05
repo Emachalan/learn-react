@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import FamilyParent from './ChildCom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FamilyParent name={10} age={'12'}/>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('roo2t')
 );
 
 // If you want to start measuring performance in your app, pass a function

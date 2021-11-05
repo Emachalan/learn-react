@@ -1,25 +1,31 @@
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {name: "Ema"}
+    this.OnSubmit = this.OnSubmit.bind(this);
+  }
+
+  OnSubmit(){
+   console.log("on click work");
+   this.setState({
+     name: "chalan"
+   })
+  }
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {this.state.name}
+      <button onClick={this.OnSubmit}>
+        Submit
+      </button>
     </div>
   );
+  }
 }
 
 export default App;
